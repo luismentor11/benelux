@@ -1,0 +1,76 @@
+{
+  "Navbar": {
+    "properties": "Properties",
+    "developments": "Developments",
+    "lifestyle": "Lifestyle",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "title": "THE ART OF LIVING IN MENDOZA",
+    "subtitle": "Exclusive properties and curated real estate developments in the land of sun and fine wine.",
+    "cta": "Explore Properties",
+    "investCta": "View Developments"
+  },
+  "Filters": {
+    "title": "Find your next destination",
+    "all": "All",
+    "buy": "Buy",
+    "invest": "Invest",
+    "stage": "Stage",
+    "pozo": "Pre-construction",
+    "desarrollo": "Under Construction",
+    "finalizado": "Finished",
+    "location": "Location",
+    "search": "Search",
+    "priceRange": "Price Range"
+  },
+  "Developments": {
+    "title": "Real Estate Developments",
+    "subtitle": "Strategic investments in the fastest-growing and highest-appreciation areas of Mendoza.",
+    "stages": {
+      "pozo": {
+        "title": "Pre-sale / Off-plan",
+        "description": "Acquire units at initial values with maximum assured future capital gains."
+      },
+      "desarrollo": {
+        "title": "Under Construction",
+        "description": "Projects with consolidated progress of construction. Custom financing available."
+      },
+      "finalizado": {
+        "title": "Immediate Delivery",
+        "description": "Finished properties ready to move in or start generating short-term rental income."
+      }
+    }
+  },
+  "Lifestyle": {
+    "title": "Mendoza Lifestyle",
+    "subtitle": "Live surrounded by nature, world-class vineyards, and the majestic Andes Mountains.",
+    "item1": {
+      "title": "Land of Vineyards",
+      "description": "Exclusive properties in Luján de Cuyo and Valle de Uco, integrated into boutique wineries and active estates."
+    },
+    "item2": {
+      "title": "Mountain Adventures",
+      "description": "Unrivaled views of the Cordón del Plata and direct access to mountain activities minutes away from the city."
+    },
+    "item3": {
+      "title": "Gastronomy & Culture",
+      "description": "The gastronomic capital of wine offers you an award-winning culinary scene recognized by Michelin stars."
+    }
+  },
+  "Contact": {
+    "title": "Let's Begin Your Next Investment",
+    "subtitle": "Our local advisors will provide you with personalized and confidential assistance.",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Message / Inquiry",
+    "send": "Send Message",
+    "success": "Message sent successfully! We will get back to you shortly.",
+    "whatsapp": "Contact via WhatsApp"
+  },
+  "Footer": {
+    "about": "We curate unique real estate experiences in Mendoza, connecting global investors with the best lands and developments in the region.",
+    "copyright": "© 2026 Web Benelux Real Estate Mendoza. All rights reserved."
+  }
+}

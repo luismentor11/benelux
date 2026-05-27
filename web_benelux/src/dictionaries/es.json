@@ -1,0 +1,76 @@
+{
+  "Navbar": {
+    "properties": "Propiedades",
+    "developments": "Desarrollos",
+    "lifestyle": "Estilo de Vida",
+    "contact": "Contacto"
+  },
+  "Hero": {
+    "title": "EL ARTE DE VIVIR EN MENDOZA",
+    "subtitle": "Propiedades exclusivas y desarrollos inmobiliarios seleccionados en la tierra del sol y del buen vino.",
+    "cta": "Explorar Propiedades",
+    "investCta": "Ver Desarrollos"
+  },
+  "Filters": {
+    "title": "Encuentra tu próximo destino",
+    "all": "Todos",
+    "buy": "Comprar",
+    "invest": "Invertir",
+    "stage": "Etapa",
+    "pozo": "En Pozo",
+    "desarrollo": "En Construcción",
+    "finalizado": "Terminado",
+    "location": "Ubicación",
+    "search": "Buscar",
+    "priceRange": "Rango de Precio"
+  },
+  "Developments": {
+    "title": "Desarrollos Inmobiliarios",
+    "subtitle": "Inversiones estratégicas en las zonas de mayor crecimiento y plusvalía de Mendoza.",
+    "stages": {
+      "pozo": {
+        "title": "Pre-venta / Pozo",
+        "description": "Adquiere unidades a valores iniciales con la máxima rentabilidad futura asegurada."
+      },
+      "desarrollo": {
+        "title": "En Construcción",
+        "description": "Proyectos con avance de obra consolidado. Financiación a medida."
+      },
+      "finalizado": {
+        "title": "Entrega Inmediata",
+        "description": "Propiedades terminadas listas para habitar o comenzar a generar renta temporaria."
+      }
+    }
+  },
+  "Lifestyle": {
+    "title": "Estilo de Vida Mendoza",
+    "subtitle": "Vivir rodeado de naturaleza, viñedos de clase mundial y la cordillera de los Andes.",
+    "item1": {
+      "title": "Tierra de Viñedos",
+      "description": "Propiedades exclusivas en Luján de Cuyo y Valle de Uco, integradas en bodegas y fincas en producción."
+    },
+    "item2": {
+      "title": "Aventuras de Montaña",
+      "description": "Vistas inigualables al Cordón del Plata y acceso directo a actividades de cordillera a minutos de la ciudad."
+    },
+    "item3": {
+      "title": "Gastronomía & Cultura",
+      "description": "La capital gastronómica del vino te ofrece una escena culinaria galardonada por estrellas Michelin."
+    }
+  },
+  "Contact": {
+    "title": "Iniciemos tu Próxima Inversión",
+    "subtitle": "Nuestros asesores locales te brindarán una atención personalizada y confidencial.",
+    "name": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "message": "Mensaje / Consulta",
+    "send": "Enviar Mensaje",
+    "success": "¡Mensaje enviado con éxito! Nos comunicaremos a la brevedad.",
+    "whatsapp": "Contactar por WhatsApp"
+  },
+  "Footer": {
+    "about": "Curamos experiencias inmobiliarias únicas en Mendoza, conectando inversores globales con las mejores tierras y desarrollos de la región.",
+    "copyright": "© 2026 Web Benelux Real Estate Mendoza. Todos los derechos reservados."
+  }
+}
