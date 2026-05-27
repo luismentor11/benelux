@@ -38,41 +38,46 @@ export default async function HomePage({ params }: PageProps) {
   ];
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen bg-black text-white selection:bg-[#E31837] selection:text-white">
       {/* 1. Hero Section */}
       <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/hero.png"
-            alt="Mendoza Luxury Real Estate"
+            alt="Benelux Luxury Real Estate"
             fill
             priority
-            className="object-cover brightness-[0.85] contrast-[1.05]"
+            className="object-cover brightness-[0.6] contrast-[1.1] scale-105 animate-[kenburns_20s_ease-out_forwards]"
             sizes="100vw"
           />
           {/* Subtle gradient overlay to read text */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-stone-900/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/40" />
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center max-w-4xl px-6 flex flex-col items-center animate-fade-in">
-          <h1 className="text-4xl md:text-7xl font-serif text-white tracking-[0.1em] leading-tight mb-6">
+        <div className="relative z-10 text-center max-w-5xl px-6 flex flex-col items-center animate-fade-in mt-16">
+          <span className="text-[0.65rem] tracking-[0.4em] text-white/70 uppercase mb-6 flex items-center gap-4">
+            <div className="w-12 h-[1px] bg-white/30"></div>
+            Inversiones Inmobiliarias
+            <div className="w-12 h-[1px] bg-white/30"></div>
+          </span>
+          <h1 className="text-4xl md:text-7xl font-serif text-white tracking-widest leading-[1.1] mb-8 font-light uppercase">
             {dict.Hero.title}
           </h1>
-          <p className="text-stone-200 text-sm md:text-lg tracking-widest max-w-2xl font-light mb-12 uppercase leading-relaxed">
+          <p className="text-white/70 text-xs md:text-sm tracking-[0.25em] max-w-2xl font-light mb-12 uppercase leading-relaxed">
             {dict.Hero.subtitle}
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
             <Link
               href={`/${locale}/propiedades`}
-              className="bg-white text-stone-900 px-10 py-4 text-xs font-semibold tracking-[0.2em] uppercase border border-white hover:bg-transparent hover:text-white hover:border-white transition-all duration-300 shadow-lg text-center"
+              className="bg-[#E31837] text-white px-12 py-4 text-[0.65rem] font-semibold tracking-[0.25em] uppercase hover:bg-white hover:text-black transition-all duration-500 text-center"
             >
               {dict.Hero.cta}
             </Link>
             <Link
               href={`/${locale}/desarrollos`}
-              className="bg-transparent text-white px-10 py-4 text-xs font-semibold tracking-[0.2em] uppercase border border-white/60 hover:border-white hover:bg-white/10 transition-all duration-300 text-center"
+              className="bg-transparent text-white px-12 py-4 text-[0.65rem] font-semibold tracking-[0.25em] uppercase border border-white/30 hover:border-white hover:bg-white hover:text-black transition-all duration-500 text-center"
             >
               {dict.Hero.investCta}
             </Link>
@@ -80,147 +85,121 @@ export default async function HomePage({ params }: PageProps) {
         </div>
 
         {/* Floating Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center animate-bounce">
-          <span className="text-[0.6rem] tracking-[0.3em] text-white/50 uppercase mb-2">Scroll</span>
-          <div className="w-0.5 h-8 bg-white/40" />
+        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center">
+          <span className="text-[0.55rem] tracking-[0.4em] text-white/40 uppercase mb-4">Discover</span>
+          <div className="w-[1px] h-12 bg-white/20 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full bg-white animate-[scrolldown_2s_ease-in-out_infinite]"></div>
+          </div>
         </div>
       </section>
 
-      {/* 2. Search & Filter Bar Overlay (Mockup) */}
-      <section className="relative z-20 -mt-16 container-custom px-4 mb-24">
-        <div className="bg-white/80 backdrop-blur-lg shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-white/50 p-8 grid grid-cols-1 md:grid-cols-4 gap-6 items-end rounded-lg">
-          <div className="flex flex-col space-y-2">
-            <label className="text-[0.65rem] tracking-[0.15em] text-stone-500 uppercase font-bold flex items-center gap-1.5">
-              <svg className="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
+      {/* 2. Search & Filter Bar Overlay */}
+      <section className="relative z-20 -mt-8 container-custom px-4 mb-32">
+        <div className="bg-black/60 backdrop-blur-xl border border-white/10 p-8 grid grid-cols-1 md:grid-cols-4 gap-8 items-end">
+          <div className="flex flex-col space-y-3">
+            <label className="text-[0.6rem] tracking-[0.2em] text-white/50 uppercase flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-[#E31837] rounded-full"></span>
               {dict.Filters.buy} / {dict.Filters.invest}
             </label>
-            <select className="border border-stone-200 px-4 py-3 text-xs bg-stone-50/50 rounded outline-none focus:border-primary transition-all duration-350 cursor-pointer">
-              <option>{dict.Filters.all}</option>
-              <option>{dict.Filters.buy}</option>
-              <option>{dict.Filters.invest}</option>
+            <select className="border-b border-white/20 pb-2 text-xs bg-transparent text-white outline-none focus:border-[#E31837] transition-all duration-300 cursor-pointer w-full appearance-none rounded-none">
+              <option className="bg-black text-white">{dict.Filters.all}</option>
+              <option className="bg-black text-white">{dict.Filters.buy}</option>
+              <option className="bg-black text-white">{dict.Filters.invest}</option>
             </select>
           </div>
 
-          <div className="flex flex-col space-y-2">
-            <label className="text-[0.65rem] tracking-[0.15em] text-stone-500 uppercase font-bold flex items-center gap-1.5">
-              <svg className="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
+          <div className="flex flex-col space-y-3">
+            <label className="text-[0.6rem] tracking-[0.2em] text-white/50 uppercase flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
               {dict.Filters.location}
             </label>
-            <select className="border border-stone-200 px-4 py-3 text-xs bg-stone-50/50 rounded outline-none focus:border-primary transition-all duration-350 cursor-pointer">
-              <option>{dict.Filters.all}</option>
-              <option>Chacras de Coria</option>
-              <option>Valle de Uco</option>
-              <option>Ciudad de Mendoza</option>
+            <select className="border-b border-white/20 pb-2 text-xs bg-transparent text-white outline-none focus:border-white transition-all duration-300 cursor-pointer w-full appearance-none rounded-none">
+              <option className="bg-black text-white">{dict.Filters.all}</option>
+              <option className="bg-black text-white">Chacras de Coria</option>
+              <option className="bg-black text-white">Valle de Uco</option>
+              <option className="bg-black text-white">Ciudad de Mendoza</option>
             </select>
           </div>
 
-          <div className="flex flex-col space-y-2">
-            <label className="text-[0.65rem] tracking-[0.15em] text-stone-500 uppercase font-bold flex items-center gap-1.5">
-              <svg className="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
+          <div className="flex flex-col space-y-3">
+            <label className="text-[0.6rem] tracking-[0.2em] text-white/50 uppercase flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-[#0033A0] rounded-full"></span>
               {dict.Filters.stage}
             </label>
-            <select className="border border-stone-200 px-4 py-3 text-xs bg-stone-50/50 rounded outline-none focus:border-primary transition-all duration-350 cursor-pointer">
-              <option>{dict.Filters.all}</option>
-              <option>{dict.Filters.pozo}</option>
-              <option>{dict.Filters.desarrollo}</option>
-              <option>{dict.Filters.finalizado}</option>
+            <select className="border-b border-white/20 pb-2 text-xs bg-transparent text-white outline-none focus:border-[#0033A0] transition-all duration-300 cursor-pointer w-full appearance-none rounded-none">
+              <option className="bg-black text-white">{dict.Filters.all}</option>
+              <option className="bg-black text-white">{dict.Filters.pozo}</option>
+              <option className="bg-black text-white">{dict.Filters.desarrollo}</option>
+              <option className="bg-black text-white">{dict.Filters.finalizado}</option>
             </select>
           </div>
 
           <Link
             href={`/${locale}/propiedades`}
-            className="bg-stone-900 text-white text-center py-3.5 text-xs font-semibold tracking-[0.2em] uppercase hover:bg-primary transition-all duration-300 rounded shadow-md cursor-pointer flex items-center justify-center gap-2"
+            className="bg-white text-black text-center py-4 text-[0.65rem] font-bold tracking-[0.25em] uppercase hover:bg-[#E31837] hover:text-white transition-all duration-500 cursor-pointer flex items-center justify-center gap-3"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
             {dict.Filters.search}
+            <span className="text-lg leading-none font-light">→</span>
           </Link>
         </div>
       </section>
 
       {/* 3. Featured Properties */}
-      <section className="py-12 container-custom">
+      <section className="py-32 container-custom">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="space-y-4">
-            <span className="text-red-800 text-xs font-semibold tracking-[0.25em] uppercase block">
-              Colección Seleccionada
+            <span className="text-[#E31837] text-[0.65rem] font-semibold tracking-[0.3em] uppercase block">
+              Colección Exclusiva
             </span>
-            <h2 className="text-3xl md:text-5xl font-serif text-stone-900">
+            <h2 className="text-3xl md:text-5xl font-serif text-white uppercase tracking-wider font-light">
               Propiedades Destacadas
             </h2>
           </div>
           <Link
             href={`/${locale}/propiedades`}
-            className="text-xs uppercase tracking-widest text-stone-600 hover:text-stone-950 font-semibold border-b border-stone-400 pb-1 self-start md:self-auto"
+            className="text-[0.65rem] uppercase tracking-[0.25em] text-white/60 hover:text-white transition-colors border-b border-white/20 hover:border-white pb-1 self-start md:self-auto"
           >
             Ver Todo el Portafolio
           </Link>
         </div>
 
         {/* Property Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
           {featuredProperties.map((prop) => (
-            <div key={prop.id} className="group relative bg-white border border-stone-200/30 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all duration-500 rounded-lg">
+            <div key={prop.id} className="group relative flex flex-col">
               {/* Image Container */}
-              <div className="relative h-[350px] md:h-[450px] w-full overflow-hidden">
+              <div className="relative h-[500px] lg:h-[650px] w-full overflow-hidden mb-6">
                 <Image
                   src={prop.image}
                   alt={prop.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover group-hover:scale-105 transition-transform duration-[1.5s] ease-out brightness-90 group-hover:brightness-100"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 {/* Tag overlay */}
-                <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-1.5 text-[0.65rem] tracking-widest uppercase font-bold text-stone-800 rounded">
+                <div className="absolute top-6 left-6 bg-black/50 backdrop-blur-md px-4 py-2 text-[0.55rem] tracking-[0.3em] uppercase text-white border border-white/10">
                   {prop.tag}
                 </div>
               </div>
 
               {/* Details */}
-              <div className="p-8 space-y-6">
-                <div className="flex justify-between items-start">
-                  <div className="space-y-2">
-                    <h3 className="text-2xl font-serif text-stone-900 group-hover:text-primary transition-colors duration-300">
-                      {prop.title}
-                    </h3>
-                    <p className="text-xs tracking-wider text-stone-500">
-                      {prop.location}
-                    </p>
-                  </div>
-                  <span className="font-serif text-xl text-stone-900 font-semibold text-primary">
-                    {prop.price}
-                  </span>
-                </div>
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-2xl font-serif text-white uppercase tracking-widest font-light">
+                  {prop.title}
+                </h3>
+                <span className="font-sans text-sm tracking-[0.15em] text-white">
+                  {prop.price}
+                </span>
+              </div>
+              
+              <p className="text-[0.65rem] tracking-[0.2em] text-white/50 uppercase mb-6">
+                {prop.location}
+              </p>
 
-                <div className="border-t border-stone-100 pt-6 flex items-center justify-between text-xs text-stone-600 tracking-wider">
-                  <span className="flex items-center gap-1.5">
-                    <svg className="w-4 h-4 text-stone-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                    </svg>
-                    {prop.beds} Dorms
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <svg className="w-4 h-4 text-stone-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v3c0 1.242 1.008 2.25 2.25 2.25zm0 0l-1.072 6.435A2.25 2.25 0 005.65 21h12.7a2.25 2.25 0 002.222-2.315L19.5 12" />
-                    </svg>
-                    {prop.baths} Baños
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <svg className="w-4 h-4 text-stone-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 9h6v6H9V9z" />
-                    </svg>
-                    {prop.area} Cubiertos
-                  </span>
-                </div>
+              <div className="border-t border-white/10 pt-4 flex items-center gap-8 text-[0.65rem] text-white/70 tracking-[0.2em] uppercase">
+                <span>{prop.beds} Beds</span>
+                <span>{prop.baths} Baths</span>
+                <span>{prop.area}</span>
               </div>
             </div>
           ))}
@@ -228,75 +207,76 @@ export default async function HomePage({ params }: PageProps) {
       </section>
 
       {/* 4. Developments / Investments Section */}
-      <section className="py-24 bg-stone-100/70 border-y border-stone-200/50 mt-12">
+      <section className="py-32 border-y border-white/10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050505] to-[#111111] -z-10"></div>
         <div className="container-custom">
-          <div className="max-w-3xl space-y-6 mb-20">
-            <span className="text-red-800 text-xs font-semibold tracking-[0.25em] uppercase block">
+          <div className="max-w-4xl space-y-6 mb-24">
+            <span className="text-[#E31837] text-[0.65rem] font-semibold tracking-[0.3em] uppercase block">
               Inversión y Desarrollo
             </span>
-            <h2 className="text-3xl md:text-5xl font-serif text-stone-900">
+            <h2 className="text-3xl md:text-5xl font-serif text-white uppercase tracking-wider font-light leading-tight">
               {dict.Developments.title}
             </h2>
-            <p className="text-stone-500 font-light max-w-xl">
+            <p className="text-white/50 font-light max-w-xl text-sm tracking-wider leading-relaxed">
               {dict.Developments.subtitle}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10">
             {/* Pozo */}
-            <div className="bg-white p-10 border border-stone-200/30 flex flex-col justify-between h-[320px] hover:-translate-y-2 transition-transform duration-500">
+            <div className="p-12 border-b md:border-b-0 md:border-r border-white/10 flex flex-col justify-between h-[400px] group hover:bg-white/5 transition-colors duration-500">
               <div className="space-y-6">
-                <span className="text-stone-300 font-serif text-5xl">01</span>
-                <h3 className="text-xl font-serif text-stone-900">
+                <span className="text-[#E31837] font-sans text-sm tracking-widest block mb-12">01</span>
+                <h3 className="text-2xl font-serif text-white uppercase tracking-widest font-light">
                   {dict.Developments.stages.pozo.title}
                 </h3>
-                <p className="text-xs text-stone-500 font-light leading-relaxed">
+                <p className="text-[0.7rem] text-white/50 font-light leading-loose tracking-wide">
                   {dict.Developments.stages.pozo.description}
                 </p>
               </div>
               <Link
                 href={`/${locale}/desarrollos?etapa=pozo`}
-                className="text-[0.65rem] tracking-[0.2em] uppercase font-semibold text-red-800 hover:text-red-900 self-start"
+                className="text-[0.65rem] tracking-[0.25em] uppercase text-white hover:text-[#E31837] transition-colors flex items-center gap-2 mt-8"
               >
-                Explorar Pozo
+                Explorar Pozo <span className="font-light text-lg leading-none">→</span>
               </Link>
             </div>
 
             {/* Construcción */}
-            <div className="bg-white p-10 border border-stone-200/30 flex flex-col justify-between h-[320px] hover:-translate-y-2 transition-transform duration-500">
+            <div className="p-12 border-b md:border-b-0 md:border-r border-white/10 flex flex-col justify-between h-[400px] group hover:bg-white/5 transition-colors duration-500">
               <div className="space-y-6">
-                <span className="text-stone-300 font-serif text-5xl">02</span>
-                <h3 className="text-xl font-serif text-stone-900">
+                <span className="text-white font-sans text-sm tracking-widest block mb-12">02</span>
+                <h3 className="text-2xl font-serif text-white uppercase tracking-widest font-light">
                   {dict.Developments.stages.desarrollo.title}
                 </h3>
-                <p className="text-xs text-stone-500 font-light leading-relaxed">
+                <p className="text-[0.7rem] text-white/50 font-light leading-loose tracking-wide">
                   {dict.Developments.stages.desarrollo.description}
                 </p>
               </div>
               <Link
                 href={`/${locale}/desarrollos?etapa=construccion`}
-                className="text-[0.65rem] tracking-[0.2em] uppercase font-semibold text-red-800 hover:text-red-900 self-start"
+                className="text-[0.65rem] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors flex items-center gap-2 mt-8"
               >
-                Ver Obras
+                Ver Obras <span className="font-light text-lg leading-none">→</span>
               </Link>
             </div>
 
             {/* Terminado */}
-            <div className="bg-white p-10 border border-stone-200/30 flex flex-col justify-between h-[320px] hover:-translate-y-2 transition-transform duration-500">
+            <div className="p-12 flex flex-col justify-between h-[400px] group hover:bg-white/5 transition-colors duration-500">
               <div className="space-y-6">
-                <span className="text-stone-300 font-serif text-5xl">03</span>
-                <h3 className="text-xl font-serif text-stone-900">
+                <span className="text-[#0033A0] font-sans text-sm tracking-widest block mb-12">03</span>
+                <h3 className="text-2xl font-serif text-white uppercase tracking-widest font-light">
                   {dict.Developments.stages.finalizado.title}
                 </h3>
-                <p className="text-xs text-stone-500 font-light leading-relaxed">
+                <p className="text-[0.7rem] text-white/50 font-light leading-loose tracking-wide">
                   {dict.Developments.stages.finalizado.description}
                 </p>
               </div>
               <Link
                 href={`/${locale}/desarrollos?etapa=terminado`}
-                className="text-[0.65rem] tracking-[0.2em] uppercase font-semibold text-red-800 hover:text-red-900 self-start"
+                className="text-[0.65rem] tracking-[0.25em] uppercase text-white hover:text-[#0033A0] transition-colors flex items-center gap-2 mt-8"
               >
-                Ver Terminados
+                Ver Terminados <span className="font-light text-lg leading-none">→</span>
               </Link>
             </div>
           </div>
@@ -304,86 +284,95 @@ export default async function HomePage({ params }: PageProps) {
       </section>
 
       {/* 5. Lifestyle Mendoza Section */}
-      <section id="lifestyle" className="py-24 container-custom">
-        <div className="text-center max-w-2xl mx-auto space-y-6 mb-20">
-          <span className="text-red-800 text-xs font-semibold tracking-[0.25em] uppercase">
-            Experiencia
+      <section id="lifestyle" className="py-32 container-custom">
+        <div className="max-w-3xl space-y-6 mb-24 text-center mx-auto">
+          <span className="text-[#E31837] text-[0.65rem] font-semibold tracking-[0.3em] uppercase block">
+            El Estilo de Vida
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif text-stone-900">
+          <h2 className="text-3xl md:text-5xl font-serif text-white uppercase tracking-wider font-light">
             {dict.Lifestyle.title}
           </h2>
-          <p className="text-stone-500 font-light text-sm">
+          <p className="text-white/50 font-light text-sm tracking-wider mx-auto">
             {dict.Lifestyle.subtitle}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {/* Wine */}
-          <div className="bg-white/50 backdrop-blur-sm p-8 border-t-2 border-t-primary border-x border-b border-stone-200/40 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 rounded-b-lg flex flex-col justify-between space-y-4">
-            <div className="space-y-4">
-              <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 2v20m0-20c-3.313 0-6 2.687-6 6a6 6 0 001.5 3.75l.5.5V18a2 2 0 002 2h4a2 2 0 002-2v-5.75l.5-.5A6 6 0 0018 8c0-3.313-2.687-6-6-6z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-serif text-stone-900 font-medium">
-                {dict.Lifestyle.item1.title}
-              </h3>
-              <p className="text-xs text-stone-500 font-light leading-relaxed">
-                {dict.Lifestyle.item1.description}
-              </p>
+          <div className="flex flex-col items-center text-center space-y-6 group">
+            <div className="w-16 h-16 border border-white/10 rounded-full flex items-center justify-center text-white group-hover:border-[#E31837] group-hover:text-[#E31837] transition-colors duration-500">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 2v20m0-20c-3.313 0-6 2.687-6 6a6 6 0 001.5 3.75l.5.5V18a2 2 0 002 2h4a2 2 0 002-2v-5.75l.5-.5A6 6 0 0018 8c0-3.313-2.687-6-6-6z" />
+              </svg>
             </div>
+            <h3 className="text-xl font-serif text-white uppercase tracking-widest font-light">
+              {dict.Lifestyle.item1.title}
+            </h3>
+            <p className="text-[0.7rem] text-white/50 font-light leading-loose tracking-wide">
+              {dict.Lifestyle.item1.description}
+            </p>
           </div>
 
           {/* Mountains */}
-          <div className="bg-white/50 backdrop-blur-sm p-8 border-t-2 border-t-primary border-x border-b border-stone-200/40 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 rounded-b-lg flex flex-col justify-between space-y-4">
-            <div className="space-y-4">
-              <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-serif text-stone-900 font-medium">
-                {dict.Lifestyle.item2.title}
-              </h3>
-              <p className="text-xs text-stone-500 font-light leading-relaxed">
-                {dict.Lifestyle.item2.description}
-              </p>
+          <div className="flex flex-col items-center text-center space-y-6 group">
+            <div className="w-16 h-16 border border-white/10 rounded-full flex items-center justify-center text-white group-hover:border-white group-hover:text-white transition-colors duration-500">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" />
+              </svg>
             </div>
+            <h3 className="text-xl font-serif text-white uppercase tracking-widest font-light">
+              {dict.Lifestyle.item2.title}
+            </h3>
+            <p className="text-[0.7rem] text-white/50 font-light leading-loose tracking-wide">
+              {dict.Lifestyle.item2.description}
+            </p>
           </div>
 
           {/* Gastronomy */}
-          <div className="bg-white/50 backdrop-blur-sm p-8 border-t-2 border-t-primary border-x border-b border-stone-200/40 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 rounded-b-lg flex flex-col justify-between space-y-4">
-            <div className="space-y-4">
-              <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-serif text-stone-900 font-medium">
-                {dict.Lifestyle.item3.title}
-              </h3>
-              <p className="text-xs text-stone-500 font-light leading-relaxed">
-                {dict.Lifestyle.item3.description}
-              </p>
+          <div className="flex flex-col items-center text-center space-y-6 group">
+            <div className="w-16 h-16 border border-white/10 rounded-full flex items-center justify-center text-white group-hover:border-[#0033A0] group-hover:text-[#0033A0] transition-colors duration-500">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+              </svg>
             </div>
+            <h3 className="text-xl font-serif text-white uppercase tracking-widest font-light">
+              {dict.Lifestyle.item3.title}
+            </h3>
+            <p className="text-[0.7rem] text-white/50 font-light leading-loose tracking-wide">
+              {dict.Lifestyle.item3.description}
+            </p>
           </div>
         </div>
       </section>
 
       {/* 6. Contact Form Section */}
-      <section id="contacto" className="py-24 bg-stone-900 text-white relative">
-        <div className="container-custom max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-16">
-          <div className="space-y-6 flex flex-col justify-center">
-            <span className="text-primary text-xs font-semibold tracking-[0.25em] uppercase">
+      <section id="contacto" className="py-32 bg-[#050505] border-t border-white/10">
+        <div className="container-custom max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-24">
+          <div className="space-y-8 flex flex-col justify-center">
+            <span className="text-[#E31837] text-[0.65rem] font-semibold tracking-[0.3em] uppercase block">
               Contacto
             </span>
-            <h2 className="text-3xl md:text-5xl font-serif leading-tight">
+            <h2 className="text-3xl md:text-5xl font-serif text-white uppercase tracking-wider font-light leading-tight">
               {dict.Contact.title}
             </h2>
-            <p className="text-stone-400 font-light text-sm">
+            <p className="text-white/50 font-light text-sm tracking-wider leading-relaxed">
               {dict.Contact.subtitle}
             </p>
+            
+            <div className="pt-8 space-y-4">
+              <div className="flex items-center gap-4 text-white/70">
+                <div className="w-8 h-[1px] bg-[#E31837]"></div>
+                <span className="text-xs tracking-[0.2em] uppercase">Mendoza, Argentina</span>
+              </div>
+              <div className="flex items-center gap-4 text-white/70">
+                <div className="w-8 h-[1px] bg-white/30"></div>
+                <span className="text-xs tracking-[0.2em] uppercase">+54 261 555-1234</span>
+              </div>
+              <div className="flex items-center gap-4 text-white/70">
+                <div className="w-8 h-[1px] bg-[#0033A0]"></div>
+                <span className="text-xs tracking-[0.2em] uppercase">info@benelux.com</span>
+              </div>
+            </div>
           </div>
 
           {/* Form Component */}
@@ -392,6 +381,18 @@ export default async function HomePage({ params }: PageProps) {
           </div>
         </div>
       </section>
+      
+      {/* Keyframes for animations injected locally */}
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes kenburns {
+          0% { transform: scale(1); }
+          100% { transform: scale(1.05); }
+        }
+        @keyframes scrolldown {
+          0% { transform: translateY(-100%); }
+          100% { transform: translateY(100%); }
+        }
+      `}} />
     </div>
   );
 }
