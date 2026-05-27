@@ -94,7 +94,7 @@ export default async function HomePage({ params }: PageProps) {
       </section>
 
       {/* 2. Search & Filter Bar Overlay */}
-      <section className="relative z-20 -mt-8 container-custom px-4 mb-56">
+      <section className="relative z-20 -mt-8 container-custom px-4 mb-32 md:mb-48">
         <div className="bg-black/60 backdrop-blur-xl border border-white/10 p-8 grid grid-cols-1 md:grid-cols-4 gap-8 items-end">
           <div className="flex flex-col space-y-3">
             <label className="text-[0.6rem] tracking-[0.2em] text-white/50 uppercase flex items-center gap-2">
@@ -145,7 +145,7 @@ export default async function HomePage({ params }: PageProps) {
       </section>
 
       {/* 3. Featured Properties */}
-      <section className="py-56 container-custom">
+      <section className="min-h-[90vh] flex flex-col justify-center py-20 md:py-40 container-custom">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="space-y-4">
             <span className="text-[#E31837] text-[0.65rem] font-semibold tracking-[0.3em] uppercase block">
@@ -207,7 +207,7 @@ export default async function HomePage({ params }: PageProps) {
       </section>
 
       {/* 4. Developments / Investments Section */}
-      <section className="py-56 border-y border-white/10 relative overflow-hidden">
+      <section className="min-h-[90vh] flex flex-col justify-center py-20 md:py-40 border-y border-white/10 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#050505] to-[#111111] -z-10"></div>
         <div className="container-custom">
           <div className="max-w-4xl space-y-6 mb-24">
@@ -284,7 +284,7 @@ export default async function HomePage({ params }: PageProps) {
       </section>
 
       {/* 5. Lifestyle Mendoza Section */}
-      <section id="lifestyle" className="py-56 container-custom">
+      <section id="lifestyle" className="min-h-[90vh] flex flex-col justify-center py-20 md:py-40 container-custom">
         <div className="max-w-3xl space-y-6 mb-24 text-center mx-auto">
           <span className="text-[#E31837] text-[0.65rem] font-semibold tracking-[0.3em] uppercase block">
             El Estilo de Vida
@@ -346,7 +346,7 @@ export default async function HomePage({ params }: PageProps) {
       </section>
 
       {/* 6. Contact Form Section */}
-      <section id="contacto" className="py-56 bg-[#050505] border-t border-white/10">
+      <section id="contacto" className="min-h-[90vh] flex flex-col justify-center py-20 md:py-40 bg-[#050505] border-t border-white/10">
         <div className="container-custom max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-24">
           <div className="space-y-8 flex flex-col justify-center">
             <span className="text-[#E31837] text-[0.65rem] font-semibold tracking-[0.3em] uppercase block">
